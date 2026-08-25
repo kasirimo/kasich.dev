@@ -1,20 +1,24 @@
 /*$bgColor: #0A0D12;*/
 .hero {
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
+/*
 .background-effect {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-image: radial-gradient(rgba(244, 244, 245, 0.3333333333) 1px, transparent 1px);
-  background-size: 50px 50px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-image: radial-gradient(
+        #f4f4f555 1px,
+        transparent 1px
+    );
+    background-size: 50px 50px;    
 }
-
+*/
 .hero-content {
   position: absolute;
   left: 50%;
@@ -50,7 +54,7 @@
 
 body {
   min-height: 300vh;
-  background-color: #111315 !important;
+  /*background-color: variables.$bgColor !important;*/
 }
 
 .section-containers {
@@ -84,20 +88,23 @@ header {
   width: 100%;
   max-width: 100%;
   margin-inline: auto;
-  position: fixed !important;
+  position: sticky !important;
   top: 0;
   z-index: 1000;
-  background: transparent;
+  background: #0E1012;
   border: 0px solid rgba(255, 255, 255, 0.1);
   border-bottom-width: 1px;
   transition: 0.3s ease;
-  color: white;
 }
 header img {
   width: 150px;
 }
 header a {
   color: white !important;
+}
+header .nav-contact {
+  background-color: #e50914;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

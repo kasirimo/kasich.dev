@@ -1,10 +1,10 @@
 @use "variables";
 
 .hero {
-    height: 100vh;
-    position: relative;
+    height: 90vh;
+    position: relative;    
 }
-
+/*
 .background-effect {
     height: 100%;
     width: 100%;
@@ -18,7 +18,7 @@
     );
     background-size: 50px 50px;    
 }
-
+*/
 .hero-content {        
     position: absolute;
     left: 50%;

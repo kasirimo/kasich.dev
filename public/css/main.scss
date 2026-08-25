@@ -12,7 +12,8 @@
 
 body {
     min-height: 300vh;
-    background-color: variables.$bgColor !important;
+    /*background-color: variables.$bgColor !important;*/
+    
 }
 
 .section-containers {
@@ -47,14 +48,13 @@ header {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;    
-    position: fixed !important;
+    position: sticky !important;
     top: 0;    
     z-index: 1000;
-    background: transparent;
+    background: #0E1012;
     border: 0px solid rgba(255,255,255,0.1);    
     border-bottom-width: 1px;
-    transition: 0.3s ease;    
-    color: white;
+    transition: 0.3s ease;        
         
 
     img {
@@ -62,6 +62,10 @@ header {
     }
 
     a {
-        color: white !important;
+       color: white !important;
+    }
+    .nav-contact {
+        background-color: variables.$primary;
+        color: white;
     }
 }

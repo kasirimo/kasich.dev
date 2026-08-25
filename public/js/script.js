@@ -111,7 +111,7 @@ function draw(time) {
 
 
   // Fade previous frames
-  ctx.fillStyle = '#111315';
+  ctx.fillStyle = '#0E1012';
   ctx.fillRect(
     0,
     0,
