@@ -1,0 +1,134 @@
+@use "variables";
+
+header {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;    
+    position: sticky !important;
+    top: 0;    
+    z-index: 1000;
+    background: #0E1012;
+    border: 0px solid rgba(255,255,255,0.1);    
+    border-bottom-width: 1px;
+    transition: 0.3s ease;        
+        
+
+    img {
+        width: 150px;
+    }
+
+    a {
+       color: white !important;
+    }
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: #0E1012;
+
+    a {
+        text-align: center !important;
+    }
+
+    a::before, a::after {
+        display: none;
+    }
+
+}
+
+#navigation ul {
+    display: flex;
+    flex-direction: column;    
+    margin-top: 50px;
+}
+
+.nav-contact {
+    text-align: left !important;
+    background-color: none !important;
+}
+
+.nav-contact:hover {
+    background: none !important;
+}
+
+.nav-control {
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: variables.$white;    
+}
+
+.nav-close {
+    position: absolute;
+    top: 2%;
+    right: 5%;    
+}
+
+@media screen and (min-width: 992px) {
+    #navigation {
+        position: static;
+        height: unset;
+        width: unset;
+        background-color: inherit;
+
+        a {
+            position: relative;
+            text-align: unset !important;
+        }
+    
+        @mixin hovereffect {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            background-color: #a1a1aa;
+            transition: 0.5s ease;
+        }
+    
+        a:not(.nav-contact)::before {
+            @include hovereffect();
+            width: 10px;
+            height: 10px;
+            bottom: -10%;
+            border-radius: 50%;
+            z-index: 2;        
+        }
+    
+        a:not(.nav-contact)::after {
+            @include hovereffect();
+            width: 50%;
+            height: 2px;                
+        }
+    
+        a:hover::before {
+            left: 75%;
+            background-color: variables.$primary;
+            box-shadow: 0 0 10px 5px variables.$primary;
+        }
+    
+        a:hover::after {
+            background-color: variables.$primary;
+            box-shadow: 0 0 10px 1px variables.$primary;
+        }        
+    }
+    #navigation ul {
+        flex-direction: row;        
+        margin-top: 0;
+    }
+    .nav-contact {
+        text-align: center !important;
+        background-color: variables.$primary !important;
+        color: white;
+    }
+    .nav-contact:hover {
+        background-color: variables.$primaryHover !important;
+    }
+    .nav-control {
+        display: none;
+    }
+}

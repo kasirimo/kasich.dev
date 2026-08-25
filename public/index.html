@@ -11,14 +11,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">        
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     </head>
     <body>
         
         <header class="header">
             <div class="header-content navbar navbar-expand-lg justify-content-between content-containers">
-                <h1 class="nav-brand"><span style="color: #e50914;">&#60;/</span>KASICH<span style="color: #e50914">.</span><span style="color: #3b82f6">dev</span><span style="color: #e50914">&#62;</span></h1>
-                <nav>
-                    <ul class="navbar-nav">
+                <!--
+                <h1 class="nav-brand text-white"><span style="color: #e50914;">&#60;/</span>KASICH<span style="color: #e50914">.</span><span style="color: #3b82f6">dev</span><span style="color: #e50914">&#62;</span></h1>
+                -->
+                <h1 class="nav-brand" style="color: #e50914">KASICH<span style="color: white;">.</span><span style="color: #3b82f6;">dev</span></h1>
+                <button class="nav-control nav-open"><i class="ri-menu-3-fill"></i></button>
+                <nav id="navigation">
+                    <button class="nav-control nav-close"><i class="ri-close-large-line"></i></button>
+                    <ul class="navbar-nav">                        
                         <li class="nav-item"><a href="#problem" class="nav-link">Problem</a></li>
                         <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                         <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>                        
@@ -37,15 +43,15 @@
 
                 <div class="hero-content content-containers text-white text-center">
                     <h1>
-                        Solutions That Help Your Business Get Seen,<br /> Get Customers and Grow.
+                        Solutions That Help Your Business <span style="background: linear-gradient(90deg, #e50914,#3b82f6); background-clip: text;-webkit-background-clip: text;color: transparent">Get Seen, <br />Get Customers and Grow.</span>
                     </h1>
-                    <p>
+                    <p style="color: #a1a1aa !important;" class="mt-3 mb-4">
                         Whether it is lack of online presence, booking mix ups, slow website or manual logs.<br />
-                        I build websites, softwares and digital solutions that relieve your pains and help you grow
+                        I build websites, softwares and digital solutions that relieve your pains and help you grow.
                     </p>
                     <article>
-                        <a href="" class="btn btn-success">Whatsapp Me</a>
-                        <a href="" class="btn btn-danger">Start Your Journey</a>
+                        <a href="" class="btn me-3 hero-whatsapp" style="color: white; background-color: hsl(120, 70%, 42%);"><i class="ri-whatsapp-line"></i> Whatsapp Me</a>
+                        <a href="" class="btn hero-contact" style="color: white; background-color: #e50914">Start Your Journey</a>
                     </article>
                 </div>
 

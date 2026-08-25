@@ -22,6 +22,19 @@ window.addEventListener("scroll", () => {
     }
 })
 */
+const navigation = document.getElementById("navigation");
+const navOpen = document.querySelector(".nav-open");
+const navClose = document.querySelector(".nav-close");
+
+navigation.style.transition = "0.5s ease";
+
+navOpen.addEventListener("click", () => {
+  navigation.style.right = "0";
+});
+navClose.addEventListener("click", () => {
+  navigation.style.right = "-100%";
+})
+
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 

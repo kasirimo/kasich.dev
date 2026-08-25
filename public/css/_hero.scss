@@ -43,3 +43,11 @@
     width: 100%;
     height: 100%;
 }
+
+.hero-whatsapp:hover {
+    background-color: hsl(120, 70%, 26%) !important;
+}
+
+.hero-contact:hover {
+    background: variables.$primaryHover !important;
+}
