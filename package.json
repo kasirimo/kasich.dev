@@ -1,0 +1,25 @@
+{
+  "name": "kasich.dev",
+  "version": "1.0.0",
+  "description": "Solving Real World Problems For Kenyan Businesses",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "livereload": "^0.10.3"
+  }
+}

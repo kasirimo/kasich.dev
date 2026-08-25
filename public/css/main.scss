@@ -1,0 +1,67 @@
+@use "variables";
+@use "hero";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    min-height: 300vh;
+    background-color: variables.$bgColor !important;
+}
+
+.section-containers {
+    min-height: 600px;
+    padding-block: 60px;
+}
+  
+.content-containers {
+    width: 1280px;
+    max-width: 90%;
+    margin-inline: auto !important;    
+}
+
+img {
+    max-width: 100%;
+}
+  
+@media screen and (min-width: 600px) and (max-width: 1025px) {
+    .section-containers {
+      min-height: 700px;
+      padding-block: 70px;
+    }
+}
+@media screen and (min-width: 1026px) {
+    .section-containers {
+      min-height: 800px;
+      padding-block: 80px;
+    }
+}
+
+header {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;    
+    position: fixed !important;
+    top: 0;    
+    z-index: 1000;
+    background: transparent;
+    border: 0px solid rgba(255,255,255,0.1);    
+    border-bottom-width: 1px;
+    transition: 0.3s ease;    
+    color: white;
+        
+
+    img {
+        width: 150px;
+    }
+
+    a {
+        color: white !important;
+    }
+}
