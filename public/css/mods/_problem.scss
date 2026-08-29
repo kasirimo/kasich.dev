@@ -1,0 +1,50 @@
+@use "variables";
+
+.problem-container {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    gap: 20px;    
+}
+
+.problem-container > div {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 24px 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.problem-container > div:hover {
+    transform: translateY(-10px);
+    border-color: variables.$primary;
+    box-shadow: 0 0 1px variables.$primary inset;
+}
+
+.problem-no {
+    color: variables.$primary;
+}
+
+.problem-container h6:first-child {
+    color: rgba(0,0,0,0.5);
+    font-family: variables.$subHeadFont;
+    letter-spacing: 2px;
+}
+
+.problem-container p {
+    color: rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 576px) {
+    .problem-container {
+        grid-template-columns: repeat(2, 2fr);
+        justify-content: start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .problem-container {
+        grid-template-columns: repeat(4, 2fr);
+        justify-content: start;
+    }
+}

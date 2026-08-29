@@ -1,6 +1,7 @@
-@use "variables";
-@use "header";
-@use "hero";
+@use "mods/variables";
+@use "mods/header";
+@use "mods/hero";
+@use "mods/problem";
 
 *,
 *::before,
@@ -9,6 +10,10 @@
     padding: 0;
     margin: 0;
     outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,6 +35,11 @@ body {
 
 img {
     max-width: 100%;
+}
+
+.section-subheadings {
+    color: variables.$primary !important;
+    font-family: variables.$subHeadFont !important;
 }
   
 @media screen and (min-width: 600px) and (max-width: 1025px) {
