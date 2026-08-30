@@ -2,6 +2,8 @@
 @use "mods/header";
 @use "mods/hero";
 @use "mods/problem";
+@use "mods/services";
+@use "mods/stack";
 
 *,
 *::before,
@@ -17,9 +19,8 @@ html {
 }
 
 body {
-    min-height: 300vh;
-    /*background-color: variables.$bgColor !important;*/
-    
+    font-family: variables.$bodyFont !important;
+    color: white !important; 
 }
 
 .section-containers {
@@ -33,6 +34,10 @@ body {
     margin-inline: auto !important;    
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: variables.$headFont !important;
+}
+
 img {
     max-width: 100%;
 }
@@ -40,6 +45,7 @@ img {
 .section-subheadings {
     color: variables.$primary !important;
     font-family: variables.$subHeadFont !important;
+    letter-spacing: 2px;
 }
   
 @media screen and (min-width: 600px) and (max-width: 1025px) {

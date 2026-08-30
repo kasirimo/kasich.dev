@@ -1,0 +1,100 @@
+@use "variables";
+
+#stack {
+    background-color: variables.$secondBg;
+}
+
+.banner {
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .slider {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 20%;
+        left: calc(50% - 50px);
+        transform-style: preserve-3d;
+        transform: perspective(300px);
+        animation: autoRun 20s linear infinite;
+
+        @keyframes autoRun {
+            from {
+                transform: perspective(300px) rotateX(-18deg) rotateY(0deg);
+            }
+            to {
+                transform: perspective(300px) rotateX(-18deg) rotateY(360deg);
+            }
+        }
+
+        .item {
+            position: absolute;
+            inset: 0 0 0 0;
+            transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
+            translateZ(150px);
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 0;
+            }
+        }        
+    }
+
+}
+
+.tech-stack {
+    > div {
+        background-color: variables.$accentBg;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #d1d1d1;
+    }
+    > div:hover {
+        border-color: variables.$primary;
+        box-shadow: 0 0 4px variables.$primary inset;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .banner {
+        height: 40vh;
+        .slider {
+            width: 200px;
+            height: 100px;
+            left: calc(50% - 100px);
+            transform: perspective(600px);
+    
+            .item {
+                transform: 
+                rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
+                translateZ(300px);            
+            }
+        }        
+        @keyframes autoRun {
+            from {
+                transform: perspective(600px) rotateX(-18deg) rotateY(0deg);
+            }
+            to {
+                transform: perspective(600px) rotateX(-18deg) rotateY(360deg);
+            }
+        }        
+    }
+
+    .tech-stack {
+        width: 75%;
+        margin-inline: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .banner {
+        height: 60vh;
+    }
+}

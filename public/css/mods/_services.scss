@@ -1,0 +1,21 @@
+@use "variables";
+
+#services {
+    background-color: variables.$bgColor;
+    min-height: unset !important;
+}
+
+.service-conts {
+    background-color: variables.$accentBg !important;
+    border-radius: 8px;
+    padding: 20px;
+
+    span {
+        color: variables.$primary;
+        font-size: 2rem;
+    }
+
+    p {
+        color: #d1d1d1 !important;
+    }
+}

@@ -1,5 +1,9 @@
 @use "variables";
 
+#problem {
+    color: #000;
+}
+
 .problem-container {
     display: grid;
     grid-template-columns: 80%;
@@ -27,8 +31,10 @@
 
 .problem-container h6:first-child {
     color: rgba(0,0,0,0.5);
-    font-family: variables.$subHeadFont;
+    font-family: variables.$subHeadFont !important;
     letter-spacing: 2px;
+    font-size: 0.8rem !important;
+    margin-bottom: 1rem;
 }
 
 .problem-container p {

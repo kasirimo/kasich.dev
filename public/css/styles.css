@@ -3,10 +3,10 @@ header {
   width: 100%;
   max-width: 100%;
   margin-inline: auto;
-  position: sticky !important;
+  position: fixed !important;
   top: 0;
   z-index: 1000;
-  background: #0E1012;
+  background: rgba(14, 16, 18, 0.9);
   border: 0px solid rgba(255, 255, 255, 0.1);
   border-bottom-width: 1px;
   transition: 0.3s ease;
@@ -123,7 +123,7 @@ header a {
   }
 }
 .hero {
-  height: 90vh;
+  height: 96vh;
   position: relative;
 }
 
@@ -174,6 +174,10 @@ header a {
   background: #af0810 !important;
 }
 
+#problem {
+  color: #000;
+}
+
 .problem-container {
   display: grid;
   grid-template-columns: 80%;
@@ -201,8 +205,10 @@ header a {
 
 .problem-container h6:first-child {
   color: rgba(0, 0, 0, 0.5);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", monospace !important;
   letter-spacing: 2px;
+  font-size: 0.8rem !important;
+  margin-bottom: 1rem;
 }
 
 .problem-container p {
@@ -221,6 +227,108 @@ header a {
     justify-content: start;
   }
 }
+#services {
+  background-color: #0E1012;
+  min-height: unset !important;
+}
+
+.service-conts {
+  background-color: #1A1D1F !important;
+  border-radius: 8px;
+  padding: 20px;
+}
+.service-conts span {
+  color: #e50914;
+  font-size: 2rem;
+}
+.service-conts p {
+  color: #d1d1d1 !important;
+}
+
+#stack {
+  background-color: #111315;
+}
+
+.banner {
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.banner .slider {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 20%;
+  left: calc(50% - 50px);
+  transform-style: preserve-3d;
+  transform: perspective(300px);
+  animation: autoRun 20s linear infinite;
+}
+@keyframes autoRun {
+  from {
+    transform: perspective(300px) rotateX(-18deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(300px) rotateX(-18deg) rotateY(360deg);
+  }
+}
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(150px);
+}
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 0;
+}
+
+.tech-stack > div {
+  background-color: #1A1D1F;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d1d1;
+}
+.tech-stack > div:hover {
+  border-color: #e50914;
+  box-shadow: 0 0 4px #e50914 inset;
+}
+
+@media screen and (min-width: 992px) {
+  .banner {
+    height: 40vh;
+  }
+  .banner .slider {
+    width: 200px;
+    height: 100px;
+    left: calc(50% - 100px);
+    transform: perspective(600px);
+  }
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(300px);
+  }
+  @keyframes autoRun {
+    from {
+      transform: perspective(600px) rotateX(-18deg) rotateY(0deg);
+    }
+    to {
+      transform: perspective(600px) rotateX(-18deg) rotateY(360deg);
+    }
+  }
+  .tech-stack {
+    width: 75%;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .banner {
+    height: 60vh;
+  }
+}
 *,
 *::before,
 *::after {
@@ -235,8 +343,8 @@ html {
 }
 
 body {
-  min-height: 300vh;
-  /*background-color: variables.$bgColor !important;*/
+  font-family: "DM Sans", sans-serif !important;
+  color: white !important;
 }
 
 .section-containers {
@@ -250,6 +358,10 @@ body {
   margin-inline: auto !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif !important;
+}
+
 img {
   max-width: 100%;
 }
@@ -257,6 +369,7 @@ img {
 .section-subheadings {
   color: #e50914 !important;
   font-family: "JetBrains Mono", monospace !important;
+  letter-spacing: 2px;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1025px) {
