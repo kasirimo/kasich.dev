@@ -329,6 +329,55 @@ header a {
     height: 60vh;
   }
 }
+#pricing {
+  background-color: #0E1012;
+}
+
+.pricing .pricing-container {
+  color: #d1d1d1;
+}
+.pricing .pricing-container .pricing-cont {
+  background-color: #1A1D1F;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.pricing .pricing-container .pricing-cont a {
+  background-color: #e50914 !important;
+  color: white;
+  width: 100%;
+  margin-top: 24px;
+}
+.pricing .pricing-container .pricing-cont:first-child {
+  border-color: #e50914 !important;
+}
+.pricing .pricing-container .pricing-cont:hover {
+  border-color: #e50914;
+  box-shadow: 0 0 5px #e50914 inset;
+}
+.pricing .pricing-container h4 {
+  color: white;
+}
+.pricing .pricing-container h3 {
+  color: #e50914;
+}
+.pricing .pricing-container ul {
+  list-style: none;
+}
+.pricing .pricing-container ul li {
+  position: relative;
+}
+.pricing .pricing-container ul li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #e50914;
+  border-radius: 50%;
+  position: absolute;
+  left: -5%;
+  top: calc(50% - 3px);
+}
+
 *,
 *::before,
 *::after {

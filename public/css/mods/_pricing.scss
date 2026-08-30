@@ -1,0 +1,62 @@
+@use "variables";
+
+#pricing {
+    background-color: variables.$bgColor;
+}
+
+.pricing {
+    .pricing-container {
+        color: #d1d1d1;
+        
+        .pricing-cont {
+            background-color: variables.$accentBg;
+            
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+
+            a {
+                background-color: variables.$primary !important;
+                color: white;
+                width: 100%;
+                margin-top: 24px;
+            }
+        }
+
+        .pricing-cont:first-child {
+            border-color: variables.$primary !important;
+        }
+
+        .pricing-cont:hover {
+            border-color: variables.$primary;
+            box-shadow: 0 0 5px variables.$primary inset;        
+        }
+
+        h4 {
+            color: white;
+        }
+
+        h3 {
+            color: variables.$primary;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                position: relative;
+            }
+
+            li::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: variables.$primary;
+                border-radius: 50%;
+                position: absolute;
+                left: -5%;
+                top: calc(50% - 3px);
+            }
+        }
+    }
+}
