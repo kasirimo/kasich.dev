@@ -421,6 +421,7 @@ header a {
 #policy {
   background-color: #111315;
   min-height: unset;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .policy-container .policy-item {
@@ -435,6 +436,95 @@ header a {
   color: #d1d1d1;
 }
 
+#contact {
+  background-color: #0E1012;
+}
+
+.contact-intro article p a {
+  color: #d1d1d1 !important;
+}
+.contact-intro article p a:hover {
+  color: #e50914 !important;
+}
+.contact-intro .contact-text {
+  background-color: #1A1D1F;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d1d1d1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#contactForm {
+  background-color: #1A1D1F;
+  padding: 2rem;
+  border-radius: 20px;
+}
+#contactForm label, #contactForm input {
+  display: block;
+}
+#contactForm label {
+  margin-block: 12px;
+}
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  background-color: #0E1012;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-top: 8px;
+}
+#contactForm input {
+  min-height: 2.5rem;
+  color: #d1d1d1;
+}
+#contactForm button {
+  background-color: #e50914;
+  color: white;
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-text {
+    width: 75%;
+    margin-inline: auto;
+    margin-top: 30px;
+  }
+}
+footer {
+  background-color: #0E1012;
+  color: #d1d1d1 !important;
+  min-height: unset !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top h4 {
+  font-family: "JetBrains Mono", monospace !important;
+}
+.footer-top ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+.footer-top ul li {
+  margin-left: 0 !important;
+}
+.footer-top ul li a {
+  color: #d1d1d1;
+  padding: 0 !important;
+}
+.footer-top ul li a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
 *,
 *::before,
 *::after {
