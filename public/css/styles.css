@@ -353,7 +353,6 @@ header a {
 }
 .pricing .pricing-container .pricing-cont:hover {
   border-color: #e50914;
-  box-shadow: 0 0 5px #e50914 inset;
 }
 .pricing .pricing-container h4 {
   color: white;
@@ -376,6 +375,64 @@ header a {
   position: absolute;
   left: -5%;
   top: calc(50% - 3px);
+}
+
+#faq {
+  background-color: #111315;
+  min-height: unset;
+}
+
+.faq-body .faq-item {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  cursor: pointer;
+}
+.faq-body .faq-item .faq-item-head {
+  width: 100%;
+}
+.faq-body .faq-item .faq-item-head button {
+  padding: 0 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.faq-body .faq-item .faq-item-body {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  padding: 0 !important;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+.faq-body .faq-item .faq-item-body p {
+  margin: 0;
+  padding: 0 0 25px;
+  line-height: 1.7;
+}
+.faq-body .faq-item button {
+  transition: 0.5s ease;
+}
+.faq-body .active .faq-item-body {
+  max-height: 300px !important;
+}
+.faq-body .active button {
+  transform: rotate(45deg);
+}
+
+#policy {
+  background-color: #111315;
+  min-height: unset;
+}
+
+.policy-container .policy-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.policy-container .policy-item h1 {
+  font-family: "JetBrains Mono", monospace !important;
+  color: #e50914;
+}
+.policy-container .policy-item p {
+  font-size: 0.8rem;
+  color: #d1d1d1;
 }
 
 *,

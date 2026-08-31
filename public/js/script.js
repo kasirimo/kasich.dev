@@ -288,3 +288,28 @@ window.addEventListener(
   'resize',
   resize
 );
+
+
+/*
+ ----------------
+ FAQ
+ ----------------
+*/
+
+const faqAccordion = document.querySelectorAll(".faq-item-head");
+const faqAnswer = document.querySelectorAll(".faq-item");
+
+faqAccordion.forEach(question => {
+  question.addEventListener("click", () => {
+    const currentItem = question.parentElement;
+
+    faqAnswer.forEach(item => {
+      if (item !== currentItem) {
+        item.classList.remove("active");
+      }
+    })
+
+    currentItem.classList.toggle("active");
+    
+  })
+})
