@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/vertical logo.png" rel="icon" />
         <title>Kasich.Dev | Software Solutions</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -20,7 +21,7 @@
                 <!--
                 <h1 class="nav-brand text-white"><span style="color: #e50914;">&#60;/</span>KASICH<span style="color: #e50914">.</span><span style="color: #3b82f6">dev</span><span style="color: #e50914">&#62;</span></h1>
                 -->
-                <h1 class="nav-brand" style="color: #e50914"><span style="color: white;">KASICH</span>.dev</h1>
+                <h1 class="navbar-brand"><a href="/"><img src="assets/horizontal logo.png" alt="logo" /></a></h1>
                 <button class="nav-control nav-open"><i class="ri-menu-3-fill"></i></button>
                 <nav id="navigation">
                     <button class="nav-control nav-close"><i class="ri-close-large-line"></i></button>
@@ -51,8 +52,8 @@
                         I build websites, softwares and digital solutions that relieve your pains and help you grow.
                     </p>
                     <article>
-                        <a href="" class="btn me-3 hero-whatsapp" style="color: white; background-color: hsl(120, 70%, 42%);"><i class="ri-whatsapp-line"></i> Whatsapp Me</a>
-                        <a href="" class="btn hero-contact" style="color: white; background-color: #e50914">Start Your Journey</a>
+                        <a href="https://wa.me/+254714245027" target="_blank" class="btn me-3 hero-whatsapp" style="color: white; background-color: hsl(120, 70%, 42%);"><i class="ri-whatsapp-line"></i> Whatsapp Me</a>
+                        <a href="#contact" class="btn hero-contact" style="color: white; background-color: #e50914">Request A Quote</a>
                     </article>
                 </div>
 
@@ -260,7 +261,7 @@
                                 <li>Performance Optimization</li>
                             </ul>
 
-                            <a href="" class="btn rounded-pill">Get Quote</a>
+                            <a href="#contact" class="btn rounded-pill">Get Quote</a>
                         </div>
 
                         <div class="col-10 col-md-5 col-lg pricing-cont">
@@ -274,7 +275,7 @@
                                 <li>Advanced Optimization</li>
                             </ul>
 
-                            <a href="" class="btn rounded-pill">Get Quote</a>
+                            <a href="#contact" class="btn rounded-pill">Get Quote</a>
                         </div>
 
                         <div class="col-10 col-md-5 col-lg pricing-cont">
@@ -290,7 +291,7 @@
                                 <li>Tailored Functionality</li>                                
                             </ul>
 
-                            <a href="" class="btn rounded-pill">Get Quote</a>
+                            <a href="#contact" class="btn rounded-pill">Get Quote</a>
                         </div>
 
                     </div>
@@ -476,9 +477,9 @@
                         <h2>Let's Talk About Your Project</h2>
 
                         <article class="mt-4">
-                            <p><a href="mailto:kasich.dev@gmail.com" class="btn">kasich.dev@gmail.com</a></p>
-                            <p><a href="tel:+254714245027" class="btn">+254714245027</a></p>
-                            <p><a href="wa:+254714245027" class="btn"> Chat on WhatsApp</a></p>
+                            <p><span style="color: #e50914;"><i class="ri-mail-line"></i></span><a href="mailto:kasich.dev@gmail.com" class="btn"> kasich.dev@gmail.com</a></p>
+                            <p><span style="color: #e50914;"><i class="ri-phone-line"></i></span><a href="tel:+254714245027" class="btn">+254714245027</a></p>
+                            <p><span class="text-success"><i class="ri-whatsapp-line"></i></span><a href="https://wa.me/+254714245027" target="_blank" class="btn whatsapp-contact"> Chat on WhatsApp</a></p>
                         </article>
 
                         <div class="contact-text">
@@ -499,7 +500,7 @@
                             <input type="subject" name="subject" id="user_subject" placeholder="Brief introduction on your needs" required />
                         </label>
                         <label for="user_message">Tell me about your project
-                            <textarea rows="3" cols="30" placeholder="What problem are you trying to solve"></textarea>
+                            <textarea rows="3" cols="30" id="user_message" placeholder="What problem are you trying to solve"></textarea>
                         </label>
                         <button type="submit" class="btn">Send</button>
                     </form>
@@ -514,19 +515,24 @@
 
                 <div class="footer-top row gap-3">
                     <div class="footer-brand col-12 col-lg">
-                        <h2 style="color: white;">Kasich<span style="color: #e50914;">.dev</span></h2>
-                        <p>Building digital solutions for businesses ready to grow</p>
+                        <h2><img src="assets/horizontal logo.png" alt="logo" class="footer-logo" /></h2>
+                        <p>Building digital solutions for<br /> businesses ready to grow</p>
+                        <article class="footer-profiles">
+                            <a href="https://github.com/kasirimo" target="_blank" class="btn"><i class="ri-github-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/dennis-kasirimo-949a5436b/" target="_blank" class="btn"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://web.facebook.com/profile.php?id=61578327383114" target="_blank" class="btn"><i class="ri-facebook-circle-fill"></i></a>
+                        </article>
                     </div>
     
                     <div class="footer-navigation col-12 col-lg">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="" class="btn">Problem</a></li>
-                            <li><a href="" class="btn">Services</a></li>
-                            <li><a href="" class="btn">Pricing</a></li>
-                            <li><a href="" class="btn">FAQ</a></li>
-                            <li><a href="" class="btn">Policy</a></li>
-                            <li><a href="" class="btn">Contact</a></li>
+                            <li><a href="#problem" class="btn">Problem</a></li>
+                            <li><a href="#services" class="btn">Services</a></li>
+                            <li><a href="#pricing" class="btn">Pricing</a></li>
+                            <li><a href="#faq" class="btn">FAQ</a></li>
+                            <li><a href="#policy" class="btn">Policy</a></li>
+                            <li><a href="#contact" class="btn">Contact</a></li>
                         </ul>
                     </div>
                     

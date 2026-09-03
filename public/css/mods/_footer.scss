@@ -29,6 +29,24 @@ footer {
             }
         }
     }
+
+    .footer-logo {
+        width: 200px;
+    }
+}
+
+.footer-brand {
+    .footer-profiles {
+        a {
+            color: #d1d1d1;
+            font-size: 1.2rem;
+        }
+
+        a:hover {
+            color: variables.$primary;
+        }
+
+    }
 }
 
 @media screen and (max-width: 768px) {

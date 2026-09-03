@@ -446,6 +446,9 @@ header a {
 .contact-intro article p a:hover {
   color: #e50914 !important;
 }
+.contact-intro article p .whatsapp-contact:hover {
+  color: #198754 !important;
+}
 .contact-intro .contact-text {
   background-color: #1A1D1F;
   padding: 20px;
@@ -477,9 +480,16 @@ header a {
   padding: 10px 16px;
   margin-top: 8px;
 }
+#contactForm input:focus, #contactForm textarea:focus {
+  border: 1px solid #e50914;
+}
 #contactForm input {
-  min-height: 2.5rem;
   color: #d1d1d1;
+  min-height: 2.5rem;
+}
+#contactForm textarea {
+  color: #d1d1d1;
+  min-height: 8rem;
 }
 #contactForm button {
   background-color: #e50914;
@@ -518,6 +528,17 @@ footer {
 }
 .footer-top ul li a:hover {
   color: white;
+}
+.footer-top .footer-logo {
+  width: 200px;
+}
+
+.footer-brand .footer-profiles a {
+  color: #d1d1d1;
+  font-size: 1.2rem;
+}
+.footer-brand .footer-profiles a:hover {
+  color: #e50914;
 }
 
 @media screen and (max-width: 768px) {

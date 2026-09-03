@@ -25,6 +25,7 @@ window.addEventListener("scroll", () => {
 const navigation = document.getElementById("navigation");
 const navOpen = document.querySelector(".nav-open");
 const navClose = document.querySelector(".nav-close");
+const navItems = document.querySelectorAll(".nav-item");
 
 navigation.style.transition = "0.5s ease";
 
@@ -33,7 +34,18 @@ navOpen.addEventListener("click", () => {
 });
 navClose.addEventListener("click", () => {
   navigation.style.right = "-100%";
+});
+navItems.forEach(links => {
+  links.addEventListener("click", () => {
+    navigation.style.right = "-100%";
+  })
 })
+
+/*
+------------
+Background Hero
+------------
+*/
 
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
@@ -312,4 +324,55 @@ faqAccordion.forEach(question => {
     currentItem.classList.toggle("active");
     
   })
+});
+
+
+/*
+ --------------
+   Contact Form
+ --------------
+*/
+
+const myForm = document.getElementById("contactForm");
+const username = document.getElementById("user_name");
+const email = document.getElementById("user_email");
+const subject = document.getElementById("user_subject");
+const message = document.getElementById("user_message");
+
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const nameVal = username.value;
+  const emailVal = email.value;
+  const subjectVal = subject.value;
+  const messageVal = message.value;
+
+  const userData = {
+    name: nameVal,
+    email: emailVal,
+    subject: subjectVal,
+    message: messageVal
+
+  }
+
+  const sendData = async () => {
+    try {
+      const res = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        credentials: "include",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify(userData)
+      });
+      const data = await res.json();
+
+      alert(data.message);
+
+    } catch(err) {
+      alert("Not successful");
+      console.log(err.message);
+    }
+  }
+
+  sendData();
+
 })

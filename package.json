@@ -20,6 +20,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "livereload": "^0.10.3"
+    "livereload": "^0.10.3",
+    "nodemailer": "^9.1.1"
   }
 }

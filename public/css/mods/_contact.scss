@@ -13,6 +13,10 @@
         a:hover {
             color: variables.$primary !important;
         }
+
+        .whatsapp-contact:hover {
+            color: #198754 !important;
+        }
     }
 
     .contact-text {
@@ -47,9 +51,22 @@
         padding: 10px 16px;
         margin-top: 8px;
     }
-    input {
-        min-height: 2.5rem;
+
+    @mixin textInput($minHeight) {
         color: #d1d1d1;
+        min-height: $minHeight;
+    }
+
+    input:focus, textarea:focus {
+        border: 1px solid variables.$primary;
+    }
+
+    input {
+        @include textInput(2.5rem);
+    }
+    
+    textarea {
+        @include textInput(8rem);
     }
 
     button {
