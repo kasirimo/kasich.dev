@@ -378,7 +378,7 @@ myForm.addEventListener("submit", (e) => {
 
     } catch(err) {
       formMessage.style.color = "red";
-      formMessage.innerHTML = data.message;
+      formMessage.innerHTML = "Message Not Sent";
       console.log(err.message);
     }
 
