@@ -1,3 +1,4 @@
-Solving Real World Problems For Kenyan Businesses
+## Environmental Variables
 
-Whether it is lack of online presence, booking mix ups, slow website or manual logs. I build websites, softwares and digital solutions that relieve your pains and help you grow
+EMAIL_USER=kasich.dev@gmail.com
+EMAIL_PASSWORD=xfbj pmeg syve zxwe

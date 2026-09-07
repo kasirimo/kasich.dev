@@ -167,7 +167,7 @@ header a {
 }
 
 .hero-whatsapp:hover {
-  background-color: hsl(120, 70%, 26%) !important;
+  background-color: #0c4129 !important;
 }
 
 .hero-contact:hover {
@@ -348,6 +348,9 @@ header a {
   width: 100%;
   margin-top: 24px;
 }
+.pricing .pricing-container .pricing-cont a:hover {
+  background-color: #af0810 !important;
+}
 .pricing .pricing-container .pricing-cont:first-child {
   border-color: #e50914 !important;
 }
@@ -496,6 +499,10 @@ header a {
   color: white;
   width: 100%;
   border-radius: 15px;
+  margin-top: 16px;
+}
+#contactForm button:hover {
+  background-color: #af0810;
 }
 
 @media screen and (min-width: 768px) {

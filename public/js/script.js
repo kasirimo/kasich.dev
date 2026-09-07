@@ -338,10 +338,14 @@ const username = document.getElementById("user_name");
 const email = document.getElementById("user_email");
 const subject = document.getElementById("user_subject");
 const message = document.getElementById("user_message");
+const formMessage = document.getElementById("form-message");
+const formBtn = document.getElementById("formBtn");
 
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  
+  formMessage.style.color = "white";
+  formMessage.innerHTML = "Please wait...";
   const nameVal = username.value;
   const emailVal = email.value;
   const subjectVal = subject.value;
@@ -355,7 +359,7 @@ myForm.addEventListener("submit", (e) => {
 
   }
 
-  const sendData = async () => {
+  const sendData = async () => {    
     try {
       const res = await fetch("http://localhost:3000/contact", {
         method: "POST",
@@ -365,12 +369,26 @@ myForm.addEventListener("submit", (e) => {
       });
       const data = await res.json();
 
-      alert(data.message);
+      if (!data.status) {
+        formMessage.style.color = "red";
+      } else {
+        formMessage.style.color = "green";
+      }
+      formMessage.innerHTML = data.message;    
 
     } catch(err) {
-      alert("Not successful");
+      formMessage.style.color = "red";
+      formMessage.innerHTML = data.message;
       console.log(err.message);
     }
+
+    setTimeout(() => {
+      username.value = "";
+      email.value = "";
+      subject.value = "";
+      message.value = "";
+      formMessage.innerHTML = "";
+    },2000)
   }
 
   sendData();

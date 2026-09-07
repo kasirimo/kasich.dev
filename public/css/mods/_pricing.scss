@@ -21,6 +21,10 @@
                 width: 100%;
                 margin-top: 24px;
             }
+
+            a:hover {
+                background-color: variables.$primaryHover !important;
+            }
         }
 
         .pricing-cont:first-child {

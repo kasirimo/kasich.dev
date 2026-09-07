@@ -1,4 +1,5 @@
 import transporter from "../config/nodemailer.js";
+import resend from "../config/resend.js";
 
 const contact = async (req,res) => {
     const { name, email, subject, message } = req.body;
@@ -62,11 +63,18 @@ const contact = async (req,res) => {
             `
         });
 
-        res.json({message: "Message sent successfully"});
+        /*
+        if (error) {
+            console.log(error.message);
+
+            return res.status(500).json({message: "Failed to send"});
+        }
+        */
+        res.json({message: "Message sent successfully",status: true});
     } catch(err) {
         console.log(err.message);
 
-        res.status(500).json({message: "Message Not Sent"});
+        res.status(500).json({message: "Message Not Sent", status: false});
     }    
 }
 
