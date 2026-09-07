@@ -361,7 +361,7 @@ myForm.addEventListener("submit", (e) => {
 
   const sendData = async () => {    
     try {
-      const res = await fetch("https://kasich-dev.vercel.app/3000/api/contact", {
+      const res = await fetch("https://kasich-dev.vercel.app/api/contact", {
         method: "POST",
         credentials: "include",
         headers: {"Content-type": "application/json"},
