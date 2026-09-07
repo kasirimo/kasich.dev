@@ -14,14 +14,4 @@ app.use(express.urlencoded({extended: true}));
 
 app.use("/api", contactRoute);
 
-app.get("/", (req,res) => {
-    return res.send("<h1>Homepage</h1>");
-});
-
-app.get("/about", (req,res) => {
-    return res.send("<h1>About</h1>");
-});
-
-app.listen(process.env.PORT);
-
 export default app;
