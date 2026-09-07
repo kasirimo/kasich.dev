@@ -15,8 +15,4 @@ app.use(express.static("./public"));
 
 app.use("/contact", contactRoute);
 
-app.get("/", (req,res) => {
-    return res.send("<h1>Hello world</h1>");
-})
-
 export default app;
