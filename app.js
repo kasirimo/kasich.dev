@@ -20,6 +20,8 @@ app.get("/", (req,res) => {
 
 app.get("/about", (req,res) => {
     return res.send("<h1>About</h1>");
-})
+});
+
+app.listen(process.env.PORT);
 
 export default app;
