@@ -7,8 +7,6 @@ import contact from "./controllers/contactcontroller.js";
 
 const app = express();
 
-const PORT = process.env.PORT;
-
 app.use(cors());
 
 app.use(express.json());
