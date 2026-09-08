@@ -5,8 +5,8 @@ const contact = async (req,res) => {
     const { name, email, subject, message } = req.body;
 
     try {
-        await transporter.sendMail({
-            from: "kasich.dev@gmail.com",
+        const {error } = await resend.emails.send({
+            from: "onboarding@resend.dev",
             to: "kasich.dev@gmail.com",
             replyTo: email,
             subject: `Contact Message from Kasich.dev`,
@@ -63,13 +63,13 @@ const contact = async (req,res) => {
             `
         });
 
-        /*
+        
         if (error) {
             console.log(error.message);
 
             return res.status(500).json({message: "Failed to send"});
         }
-        */
+        
         res.json({message: "Message sent successfully",status: true});
     } catch(err) {
         console.log(err.message);
