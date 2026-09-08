@@ -11,13 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "https://kasich-dev.vercel.app/"    
+    origin: "https://kasich-dev.vercel.app"    
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use("/api/contact", contactRoute);
+app.use("/api", contactRoute);
 
 app.get("/", (req,res) => {
     res.send("Server working");
