@@ -25,5 +25,5 @@ app.get("/", (req,res) => {
 })
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log("Server created successfully");
+    console.log(`Server starting at port ${PORT}`);
 });
