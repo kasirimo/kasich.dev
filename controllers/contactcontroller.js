@@ -7,7 +7,7 @@ const contact = async (req,res) => {
     try {
         const { error } = await resend.emails.send({
             from: "onboarding@resend.dev",
-            to: "kasirimod@gmail.com",
+            to: "kasich.dev@gmail.com",
             replyTo: email,
             subject: `Contact Message from Kasich.dev`,
             html: `
