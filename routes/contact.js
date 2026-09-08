@@ -1,11 +1,8 @@
 import express from "express";
 import contact from "../controllers/contactcontroller.js";
 
-const contactRoute = express.Router();
+const router = express.Router();
 
-contactRoute.post("/contact", contact);
-contactRoute.get("/contact", (req,res) => {
-    res.send("Hello");
-})
+router.post("/", contact);
 
-export default contactRoute;
+export default router;
