@@ -11,7 +11,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "https://kasich-dev.vercel.app"    
+    origin: "https://kasich-dev.vercel.app/",
+    credentials: true
 }));
 
 app.use(express.json());
