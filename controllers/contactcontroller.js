@@ -6,8 +6,8 @@ const contact = async (req,res) => {
 
     try {
         await transporter.sendMail({
-            from: "kasich.dev@gmail.com",
-            to: "kasich.dev@gmail.com",
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
             replyTo: email,
             subject: `Contact Message from Kasich.dev`,
             html: `
