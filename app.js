@@ -16,12 +16,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.use("/api/contact", contactRoute);
 
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "./public", "index.html"));
 })
 
 export default app;
