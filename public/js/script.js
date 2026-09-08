@@ -361,7 +361,7 @@ myForm.addEventListener("submit", (e) => {
 
   const sendData = async () => {    
     try {
-      const res = await fetch("https://kasich-dev.onrender.com:3000/api/contact", {
+      const res = await fetch("https://kasich-dev.onrender.com/api/contact", {
         method: "POST",
         credentials: "include",
         headers: {"Content-type": "application/json"},
