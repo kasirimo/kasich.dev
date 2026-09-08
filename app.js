@@ -8,6 +8,8 @@ import contactRoute from "./routes/contact.js";
 
 const app = express();
 
+const PORT = process.env.PORT || 5000;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,16 +18,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(express.static(path.join(__dirname, "./public")));
-
 app.use("/api/contact", contactRoute);
 
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "./public", "index.html"));
-});
-
-app.get("/api/contact", (req,res) => {
-    res.send("<h1>Hello</h1>");
+    res.send("Server working");
 })
 
-export default app;
+app.listen(PORT, () => {
+    console.log("Server created successfully");
+});
